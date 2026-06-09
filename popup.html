@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TabRoks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-wrap">
+      <img src="icons/icon48.png" alt="TabRoks" class="logo-icon" />
+      <div>
+        <h1 class="logo-title">TabRoks</h1>
+        <span class="logo-sub">by <a href="https://digitalroks.com" target="_blank" class="brand-link">DigitalRoks</a></span>
+      </div>
+    </div>
+    <div class="tab-count-badge" id="tabCount">— tabs</div>
+  </header>
+
+  <!-- Stats Panel -->
+  <section class="stats-panel" id="statsPanel">
+    <div class="stats-loading">Scanning your tabs...</div>
+  </section>
+
+  <!-- Action Buttons -->
+  <section class="actions">
+    <button class="btn btn-primary" id="btnGroup">
+      <span class="btn-icon">⚡</span>
+      <span>Auto-Group All Tabs</span>
+    </button>
+    <button class="btn btn-secondary" id="btnUngroup">
+      <span class="btn-icon">✕</span>
+      <span>Ungroup All</span>
+    </button>
+  </section>
+
+  <!-- Result Message -->
+  <div class="result-msg" id="resultMsg"></div>
+
+  <!-- Category Legend -->
+  <section class="legend">
+    <h2 class="legend-title">Categories</h2>
+    <div class="legend-grid" id="legendGrid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- Footer CTA — Lead Magnet -->
+  <footer class="footer">
+    <a href="https://digitalroks.com" target="_blank" class="footer-cta">
+      <span>🚀 Get more free AI tools at</span>
+      <strong>DigitalRoks.com</strong>
+    </a>
+  </footer>
+
+  <script src="src/categories.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

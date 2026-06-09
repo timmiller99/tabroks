@@ -1,0 +1,320 @@
+/* ============================================================
+   TabRoks — Popup Styles
+   DigitalRoks Brand: Dark theme, electric accent, clean type
+   ============================================================ */
+
+:root {
+  --bg-primary:    #0d0d0f;
+  --bg-secondary:  #16161a;
+  --bg-card:       #1e1e24;
+  --border:        #2a2a35;
+  --accent:        #7c3aed;       /* DigitalRoks purple */
+  --accent-glow:   rgba(124, 58, 237, 0.25);
+  --accent-light:  #a78bfa;
+  --text-primary:  #f4f4f5;
+  --text-secondary:#a1a1aa;
+  --text-muted:    #52525b;
+  --success:       #22c55e;
+  --warning:       #f59e0b;
+  --danger:        #ef4444;
+  --radius-sm:     6px;
+  --radius-md:     10px;
+  --radius-lg:     14px;
+  --font:          'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 340px;
+  min-height: 200px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+}
+
+.logo-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: -1px;
+}
+
+.brand-link {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand-link:hover {
+  text-decoration: underline;
+}
+
+.tab-count-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ── Stats Panel ─────────────────────────────────────────── */
+.stats-panel {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  min-height: 44px;
+}
+
+.stats-loading {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: border-color 0.15s;
+}
+
+.stat-chip:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.stat-chip .count {
+  font-weight: 700;
+  color: var(--accent-light);
+}
+
+/* ── Action Buttons ──────────────────────────────────────── */
+.actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.1px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  color: #fff;
+  box-shadow: 0 0 0 0 var(--accent-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+/* ── Result Message ──────────────────────────────────────── */
+.result-msg {
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  min-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  max-height: 0;
+}
+
+.result-msg.show {
+  padding: 8px 16px;
+  max-height: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.result-msg.success {
+  color: var(--success);
+}
+
+.result-msg.error {
+  color: var(--danger);
+}
+
+/* ── Category Legend ─────────────────────────────────────── */
+.legend {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legend-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Chrome tab group colors */
+.dot-purple { background: #a855f7; }
+.dot-orange { background: #f97316; }
+.dot-blue   { background: #3b82f6; }
+.dot-green  { background: #22c55e; }
+.dot-pink   { background: #ec4899; }
+.dot-cyan   { background: #06b6d4; }
+.dot-yellow { background: #eab308; }
+.dot-red    { background: #ef4444; }
+.dot-grey   { background: #6b7280; }
+
+/* ── Footer CTA ──────────────────────────────────────────── */
+.footer {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.12) 0%, rgba(91,33,182,0.08) 100%);
+  border-top: 1px solid rgba(124,58,237,0.2);
+}
+
+.footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 11px;
+  transition: color 0.15s;
+}
+
+.footer-cta:hover {
+  color: var(--text-primary);
+}
+
+.footer-cta strong {
+  color: var(--accent-light);
+  font-weight: 700;
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.2s ease-in-out infinite;
+}
